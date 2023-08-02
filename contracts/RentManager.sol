@@ -2,7 +2,6 @@
 pragma solidity ^0.8.9;
 import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 import "./ENS_NFT.sol";
-import "./ENSRegistryWithFallback.sol";
 
 interface IRegistrar {
     /**
@@ -20,7 +19,7 @@ interface IRegistrar {
 }
 
 interface IENSRegistryWithFallback {
-    function _setOwner(bytes32 node, address owner) internal;
+    function _setOwner(bytes32 node, address owner) external;
 }
 
 /**

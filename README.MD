@@ -16,11 +16,21 @@ npx hardhat help
 
 npx hardhat test
 
-REPORT_GAS=true npx hardhat test
+REPORT_GAS=true
 
 npx hardhat node
 
 npx hardhat run scripts/deploy.ts
+
+```
+
+Run these to deploy the ENSRentalNFT smart contract and RentManager after.
+
+```shell
+
+npx hardhat deploy --tags ensNFT
+
+npx hardhat deploy --tags RentManager
 
 ```
 
@@ -30,7 +40,7 @@ npx hardhat run scripts/deploy.ts
 
 PRIVATE_KEY_1=used as a deployer of the RentManager smart contract and ...
 
-PRIVATE_KEY_2=...
+PRIVATE_KEY_2=potential client
 
 GOERLI_RPC_URL=RPC URL to connect to Goerli
 
